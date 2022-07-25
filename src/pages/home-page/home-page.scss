@@ -1,0 +1,43 @@
+@import "../../style/common/constants";
+@import "../../style/common/typography";
+
+html,
+body {
+  background-image: url("../../../public/img/home-page-background.png");
+  background-size: cover;
+  height: 100%;
+}
+
+.home-page {
+  display: flex;
+}
+
+.signup {
+  align-items: center;
+  background-color: $white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15vh;
+  width: 20vw;
+  //TODO: Change this
+  margin-left: 5vw;
+  margin-top: 70vh;
+  //-----------------
+}
+
+.regular-text {
+  font-family: "DM Sans Regular";
+  font-size: 16px;
+  text-align: center;
+}
+
+.common-white-button {
+  background-color: $white;
+  border: 1px solid $black-russian;
+  border-radius: 8px;
+  height: 3vh;
+  margin-bottom: 4vh;
+  width: 12vw;
+}
