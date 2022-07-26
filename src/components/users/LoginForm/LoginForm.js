@@ -1,27 +1,17 @@
 import "./login-form.scss";
-import "./../../../style/common/common.scss";
+import "style/common/_common.scss";
 
 const LoginForm = () => (
   <form className="login-form">
-    <label className="login-form-input-container">
+    <label>
       Email
-      <input
-        className="login-form-input regular-text"
-        type="email"
-        placeholder="Type your email"
-      />
+      <input type="email" placeholder="Type your email" />
     </label>
-    <label className="login-form-input-container">
+    <label>
       Password
-      <input
-        className="login-form-input regular-text"
-        type="password"
-        placeholder="Type your password"
-      />
+      <input type="password" placeholder="Type your password" />
     </label>
-    <button type="button" className="common-black-button regular-text">
-      Log in
-    </button>
+    <button type="button">Log in</button>
   </form>
 );
 

@@ -1,9 +1,9 @@
-@import "../../style/common/constants";
-@import "../../style/common/typography";
+@import "style/common/constants";
+@import "style/common/typography";
 
 html,
 body {
-  background-image: url("../../../public/img/home-page-background.png");
+  background-image: url("../../assets/img/home-page-background.png");
   background-size: cover;
   height: 100vh;
 }

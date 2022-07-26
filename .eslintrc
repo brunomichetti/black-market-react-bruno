@@ -114,7 +114,7 @@
     "react/sort-comp": 1,
     "react/jsx-wrap-multilines": 0,
     "react/no-array-index-key": 0,
-    "import/extensions": 1,
+    "import/extensions": 0,
     "import/prefer-default-export": 0,
     "import/no-extraneous-dependencies": 0,
     "import/no-named-as-default": 0,
