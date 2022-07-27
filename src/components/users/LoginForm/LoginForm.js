@@ -6,14 +6,14 @@ import "./login-form.scss";
 const LoginForm = () => (
   <form className="login-form">
     <CommonInput
-      labelText="Email"
+      label="Email"
       inputType="email"
-      placeHolderText="Type your email"
+      placeHolder="Type your email"
     />
     <CommonInput
-      labelText="Password"
+      label="Password"
       inputType="password"
-      placeHolderText="Type your password"
+      placeHolder="Type your password"
     />
     <button type="button">Log in</button>
   </form>

@@ -2,17 +2,17 @@ import { string } from "prop-types";
 
 import "./common-input.scss";
 
-const CommonInput = ({ labelText, inputType, placeHolderText }) => (
+const CommonInput = ({ label, inputType, placeHolder }) => (
   <label>
-    {labelText}
-    <input type={inputType} placeholder={placeHolderText} />
+    {label}
+    <input type={inputType} placeholder={placeHolder} />
   </label>
 );
 
 CommonInput.propTypes = {
-  labelText: string,
+  label: string,
   inputType: string,
-  placeHolderText: string,
+  placeHolder: string,
 };
 
 export default CommonInput;
