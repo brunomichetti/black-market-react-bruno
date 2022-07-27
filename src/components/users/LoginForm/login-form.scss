@@ -1,0 +1,34 @@
+@import "../../../style/common/constants";
+@import "../../../style/common/typography";
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  align-content: center;
+}
+
+.login-form-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+}
+
+.login-form-input {
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 4vh;
+  margin-top: 1vh;
+  outline: none !important;
+  width: 12vw;
+}
+
+.common-black-button {
+  background-color: $black-russian;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: $white;
+  height: 4vh;
+  width: 12vw;
+}
