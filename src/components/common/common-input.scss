@@ -1,0 +1,21 @@
+@import "style/common/constants";
+@import "style/common/typography";
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-family: "DM Sans Regular";
+  font-size: 1rem;
+  margin-bottom: 3vh;
+}
+
+input {
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: "DM Sans Regular";
+  font-size: 1rem;
+  height: 4vh;
+  margin-top: 1vh;
+  outline: none !important;
+  width: 16vw;
+}
