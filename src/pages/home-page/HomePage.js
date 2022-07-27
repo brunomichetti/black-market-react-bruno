@@ -1,7 +1,7 @@
-import "./home-page.scss";
-import "style/common/_common.scss";
 import logo from "assets/logo.png";
 import LoginForm from "components/users/LoginForm/LoginForm";
+
+import "./home-page.scss";
 
 const HomePage = () => (
   <div className="home-page">

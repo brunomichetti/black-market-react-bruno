@@ -24,17 +24,19 @@
     height: 4vh;
     margin-top: 1vh;
     outline: none !important;
-    width: 12vw;
+    width: 16vw;
   }
 
   button {
     background-color: $black-russian;
+    border: 1px solid $black-russian;
     border-radius: 8px;
     box-sizing: border-box;
     color: $white;
     font-family: "DM Sans Regular";
     font-size: 1rem;
     height: 4vh;
-    width: 12vw;
+    padding: 0;
+    width: 16vw;
   }
 }

@@ -1,5 +1,6 @@
-import "./login-form.scss";
 import "style/common/_common.scss";
+
+import "./login-form.scss";
 
 const LoginForm = () => (
   <form className="login-form">

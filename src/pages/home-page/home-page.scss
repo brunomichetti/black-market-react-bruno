@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   height: 40vh;
-  width: 20vw;
+  width: 25vw;
 }
 
 .signup {
@@ -41,14 +41,16 @@ body {
   justify-content: space-around;
   height: 15vh;
   text-align: center;
-  width: 20vw;
+  width: 25vw;
 }
 
 .common-white-button {
   background-color: $white;
   border: 1px solid $black-russian;
   border-radius: 8px;
+  box-sizing: border-box;
   height: 4vh;
   margin-bottom: 4vh;
-  width: 12vw;
+  padding: 0;
+  width: 16vw;
 }
