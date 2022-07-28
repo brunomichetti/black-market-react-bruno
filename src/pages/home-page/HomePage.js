@@ -4,15 +4,15 @@ import LoginForm from "components/users/LoginForm/LoginForm";
 import "./home-page.scss";
 
 const HomePage = () => (
-  <div className="home-page">
+  <main className="home-page">
     <section className="login">
       <figure>
         <img src={logo} alt="Logo" className="logo" />
       </figure>
       <LoginForm />
-      <nav className="forgot-password-link">
+      <div className="forgot-password-link regular-text">
         <a href="/">I forgot my password.</a>
-      </nav>
+      </div>
     </section>
     <section className="signup">
       <p className="regular-text">Don't have an account?</p>
@@ -20,7 +20,7 @@ const HomePage = () => (
         Sign up
       </button>
     </section>
-  </div>
+  </main>
 );
 
 export default HomePage;

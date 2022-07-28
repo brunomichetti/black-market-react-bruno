@@ -15,7 +15,9 @@ const LoginForm = () => (
       inputType="password"
       placeHolder="Type your password"
     />
-    <button type="button">Log in</button>
+    <button type="button" className="regular-text">
+      Log in
+    </button>
   </form>
 );
 
