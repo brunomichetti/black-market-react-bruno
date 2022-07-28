@@ -17,8 +17,7 @@ body {
 }
 
 .logo {
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 2vh;
 }
 
 .login {
@@ -28,8 +27,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 40vh;
-  width: 25vw;
+  height: 58vh;
+  width: 22vw;
+}
+
+.forgot-password-link {
+  margin-bottom: 4vh;
 }
 
 .signup {
@@ -41,7 +44,7 @@ body {
   justify-content: space-around;
   height: 15vh;
   text-align: center;
-  width: 25vw;
+  width: 22vw;
 }
 
 .common-white-button {

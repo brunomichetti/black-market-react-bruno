@@ -1,0 +1,17 @@
+@import "style/common/constants";
+@import "style/common/typography";
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+}
+
+input {
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 4vh;
+  margin-top: 1vh;
+  outline: none !important;
+  width: 16vw;
+}
