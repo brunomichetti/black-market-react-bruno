@@ -4,8 +4,11 @@ import { useDispatch } from "react-redux";
 import "style/common/_common.scss";
 import CommonInput from "components/common/CommonInput";
 import { userActions } from "actions/userActions";
+import { userActionTypesConstants } from "constants/userConstants";
 
 import "./login-form.scss";
+
+const { USER_REQUEST } = userActionTypesConstants;
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -18,7 +21,7 @@ const LoginForm = () => {
   };
 
   const handleSubmit = (e) => {
-    debugger;
+    dispatch({ type: USER_REQUEST });
     e.preventDefault();
     dispatch(userActions.login(email, password));
   };
@@ -26,6 +29,7 @@ const LoginForm = () => {
   return (
     <form className="login-form" onSubmit={handleSubmit}>
       <CommonInput
+        name="email"
         label="Email"
         inputType="email"
         placeHolder="Type your email"
@@ -33,6 +37,7 @@ const LoginForm = () => {
         handleChange={handleChange}
       />
       <CommonInput
+        name="password"
         label="Password"
         inputType="password"
         placeHolder="Type your password"

@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import logo from "assets/logo.png";
 import LoginForm from "components/users/LoginForm/LoginForm";
@@ -6,7 +6,9 @@ import LoginForm from "components/users/LoginForm/LoginForm";
 import "./home-page.scss";
 
 const HomePage = () => {
-  const loggedInUser = useSelector((state) => state.user.loggedInUser);
+  const loading = useSelector((state) => state.user.loading);
+
+  const loggedInUser = sessionStorage.getItem("user");
 
   return (
     <main className="home-page">
@@ -17,6 +19,8 @@ const HomePage = () => {
               <img src={logo} alt="Logo" className="logo" />
             </figure>
             <LoginForm />
+            {/* TODO: Change this*/}
+            {loading && <> LOADING </>}
             <div className="forgot-password-link regular-text">
               <a href="/">I forgot my password.</a>
             </div>
@@ -29,6 +33,7 @@ const HomePage = () => {
           </section>
         </>
       ) : (
+        // TODO: Change this
         <> LOGGED IN </>
       )}
     </main>

@@ -1,13 +1,20 @@
 import { userServices } from "services/userServices";
+import { userActionTypesConstants } from "constants/userConstants";
+
+const { USER_REQUEST_SUCCESS } = userActionTypesConstants;
 
 const login = (email, password) => {
   return async (dispatch) => {
     try {
-      const response = await userServices.login(email, password);
-      debugger;
+      const {
+        data: { refreshToken, accessToken, user },
+      } = await userServices.login(email, password);
+      sessionStorage.setItem("refreshToken", refreshToken);
+      sessionStorage.setItem("accessToken", accessToken);
+      sessionStorage.setItem("user", user);
+      dispatch({ type: USER_REQUEST_SUCCESS });
     } catch (error) {
-      console.log(error);
-      debugger;
+      // TODO: change this
     }
   };
 };
