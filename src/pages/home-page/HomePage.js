@@ -12,7 +12,7 @@ const HomePage = () => {
 
   return (
     <main className="home-page">
-      {loggedInUser === null ? (
+      {!loggedInUser ? (
         <>
           <section className="login">
             <figure>

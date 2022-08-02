@@ -1,11 +1,12 @@
 import { userServices } from "services/userServices";
 import { userActionTypesConstants } from "constants/userConstants";
 
-const { USER_REQUEST_SUCCESS } = userActionTypesConstants;
+const { USER_REQUEST, USER_REQUEST_SUCCESS } = userActionTypesConstants;
 
 const login = (email, password) => {
   return async (dispatch) => {
     try {
+      dispatch({ type: USER_REQUEST });
       const {
         data: { refreshToken, accessToken, user },
       } = await userServices.login(email, password);
