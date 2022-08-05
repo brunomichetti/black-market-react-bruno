@@ -1,7 +1,10 @@
 import { userServices } from "services/userServices";
 import { userActionTypesConstants } from "constants/userConstants";
+import { userErrorHandlers } from "helpers/errorHandlers";
 
-const { USER_REQUEST, USER_REQUEST_SUCCESS } = userActionTypesConstants;
+const { USER_REQUEST, USER_REQUEST_SUCCESS, USER_REQUEST_ERROR } =
+  userActionTypesConstants;
+const { loginHandleError } = userErrorHandlers;
 
 const login = (email, password) => {
   return async (dispatch) => {
@@ -15,7 +18,7 @@ const login = (email, password) => {
       sessionStorage.setItem("user", user);
       dispatch({ type: USER_REQUEST_SUCCESS });
     } catch (error) {
-      // TODO: change this
+      dispatch({ type: USER_REQUEST_ERROR, data: loginHandleError(error) });
     }
   };
 };
