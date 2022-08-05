@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useIntl } from "react-intl";
 
 import "style/common/_common.scss";
 import CommonInput from "components/common/CommonInput/CommonInput";
@@ -9,6 +10,8 @@ import { userActions } from "actions/userActions";
 import "./login-form.scss";
 
 const LoginForm = () => {
+  const intl = useIntl();
+
   const dispatch = useDispatch();
 
   const { loading, errorMsg } = useSelector((state) => state.user);
@@ -31,7 +34,9 @@ const LoginForm = () => {
         name="email"
         label="Email"
         inputType="email"
-        placeHolder="Type your email"
+        placeHolder={intl.formatMessage({
+          id: "type.email",
+        })}
         inputValue={email}
         handleChange={handleChange}
       />
@@ -39,7 +44,9 @@ const LoginForm = () => {
         name="password"
         label="Password"
         inputType="password"
-        placeHolder="Type your password"
+        placeHolder={intl.formatMessage({
+          id: "type.password",
+        })}
         inputValue={password}
         handleChange={handleChange}
       />
