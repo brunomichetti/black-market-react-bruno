@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { useIntl } from "react-intl";
 
 import logo from "assets/logo.png";
 import LoginForm from "components/users/LoginForm/LoginForm";
@@ -7,6 +8,8 @@ import { Link } from "react-router-dom";
 import "./home-page.scss";
 
 const HomePage = () => {
+  const intl = useIntl();
+
   const loggedInUser = sessionStorage.getItem("user");
 
   const loading = useSelector((state) => state.user.loading);
@@ -22,12 +25,18 @@ const HomePage = () => {
             <LoginForm />
             <div className="forgot-password-link regular-text">
               <Link to="/home" className={loading && "disable-link"}>
-                I forgot my password.
+                {intl.formatMessage({
+                  id: "forgot.password",
+                })}
               </Link>
             </div>
           </section>
           <section className="signup">
-            <p className="regular-text">Don't have an account?</p>
+            <p className="regular-text">
+              {intl.formatMessage({
+                id: "dont.have.account",
+              })}
+            </p>
             <button
               type="button"
               className="common-white-button regular-text"
