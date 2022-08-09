@@ -1,63 +1,10 @@
 @import "style/common/constants";
 @import "style/common/typography";
 
-html,
-body {
-  background-image: url("../../assets/img/home-page-background.png");
-  background-size: cover;
-  height: 100vh;
-}
-
 .home-page {
-  display: flex;
-  flex-direction: column;
+  background-color: $catskill-white;
   height: 100vh;
-  justify-content: space-around;
-  padding-left: 7vw;
-}
-
-.logo {
-  margin-top: 2vh;
-}
-
-.login {
-  align-items: center;
-  background-color: $white;
-  border-radius: 1rem;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  justify-content: space-around;
-  height: 58vh;
-  width: 22vw;
-}
-
-.forgot-password-link {
-  margin-bottom: 4vh;
-}
-
-.signup {
-  align-items: center;
-  background-color: $white;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 15vh;
-  text-align: center;
-  width: 22vw;
-}
-
-.common-white-button {
-  background-color: $white;
-  border: 1px solid $black-russian;
-  border-radius: 8px;
-  box-sizing: border-box;
-  height: 4vh;
-  margin-bottom: 4vh;
-  padding: 0;
-  width: 16vw;
-}
-
-.disable-link {
-  pointer-events: none;
 }

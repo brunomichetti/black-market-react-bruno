@@ -1,0 +1,48 @@
+@import "style/common/constants";
+@import "style/common/typography";
+
+.header {
+  background-color: $black-russian;
+  width: 100vw;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+.search-container {
+  background-color: $white;
+  border-radius: 8px;
+  height: 3vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.search-input {
+  border: 0;
+  border-radius: 8px;
+  height: 3vh;
+  width: 18vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.search-button {
+  border: 0;
+  border-radius: 8px;
+  height: 3vh;
+  width: 2vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+}
+
+.search-icon {
+  height: 1vh;
+  width: 1vw;
+}
