@@ -13,9 +13,9 @@ const login = (email, password) => {
       const {
         data: { refreshToken, accessToken, user },
       } = await userServices.login(email, password);
-      sessionStorage.setItem("refreshToken", refreshToken);
-      sessionStorage.setItem("accessToken", accessToken);
-      sessionStorage.setItem("user", user);
+      localStorage.setItem("refreshToken", refreshToken);
+      localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem("user", user);
       dispatch({ type: USER_REQUEST_SUCCESS });
     } catch (error) {
       dispatch({ type: USER_REQUEST_ERROR, data: loginHandleError(error) });

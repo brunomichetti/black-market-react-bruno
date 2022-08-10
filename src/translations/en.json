@@ -4,5 +4,9 @@
   "forgot.password": "I forgot my password.",
   "dont.have.account": "Don't have an account?",
   "type.email": "Type your email",
-  "type.password": "Type your password"
+  "type.password": "Type your password",
+  "my.account": "My Account",
+
+  "search.products": "Search for products",
+  "shopping.cart": "Shopping Cart"
 }
