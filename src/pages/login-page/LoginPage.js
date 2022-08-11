@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import logo from "assets/logo.png";
 import LoginForm from "components/users/LoginForm/LoginForm";
-import { homePageLink } from "constants/linkConstants";
+import { homePath } from "constants/pathConstants";
 
 import "./login-page.scss";
 
@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (loggedInSuccess) {
-      navigate(homePageLink);
+      navigate(homePath);
     }
   }, [navigate, loggedInSuccess]);
 
