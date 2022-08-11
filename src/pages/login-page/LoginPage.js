@@ -28,7 +28,7 @@ const LoginPage = () => {
     <main className="login-page">
       <section className="login">
         <figure>
-          <img src={logo} alt="Logo" className="logo" />
+          <img src={logo} alt="" className="logo" />
         </figure>
         <LoginForm />
         <div className="forgot-password-link regular-text">
