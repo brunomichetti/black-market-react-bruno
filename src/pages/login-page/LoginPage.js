@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
+import conditionalClassName from "classnames";
 
 import logo from "assets/logo.png";
 import LoginForm from "components/users/LoginForm/LoginForm";
@@ -12,8 +13,6 @@ const LoginPage = () => {
 
   const { loading } = useSelector((state) => state.user);
 
-  const forgotPasswordClass = loading ? "disable-link" : "";
-
   return (
     <main className="login-page">
       <section className="login">
@@ -22,7 +21,12 @@ const LoginPage = () => {
         </figure>
         <LoginForm />
         <div className="forgot-password-link regular-text">
-          <Link to="/home" className={forgotPasswordClass}>
+          <Link
+            to="/home"
+            className={conditionalClassName({
+              "disable-link": loading,
+            })}
+          >
             {intl.formatMessage({
               id: "forgot.password",
             })}

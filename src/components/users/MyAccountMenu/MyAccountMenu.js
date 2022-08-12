@@ -3,6 +3,7 @@ import { useIntl } from "react-intl";
 import { bool, func } from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import conditionalClassName from "classnames";
 
 import CommonLoader from "components/common/CommonLoader/CommonLoader";
 import { userActions } from "actions/userActions";
@@ -19,8 +20,6 @@ const MyAccountMenu = ({ openedMenu = false, setOpenedMenu }) => {
   const navigate = useNavigate();
 
   const { loading, loggedOutSuccess } = useSelector((state) => state.user);
-
-  const buttonBorder = openedMenu ? "border-top" : "border";
 
   const arrowSrc = openedMenu ? arrowUp : arrowDown;
 
@@ -42,7 +41,10 @@ const MyAccountMenu = ({ openedMenu = false, setOpenedMenu }) => {
         <CommonLoader />
       ) : (
         <button
-          className={`my-account-button regular-text ${buttonBorder}`}
+          className={conditionalClassName("my-account-button regular-text", {
+            "border-top": openedMenu,
+            border: !openedMenu,
+          })}
           onClick={() => setOpenedMenu(!openedMenu)}
           disabled={loading}
         >
