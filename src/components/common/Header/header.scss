@@ -1,0 +1,75 @@
+@import "style/common/constants";
+@import "style/common/typography";
+
+.header {
+  align-items: center;
+  align-content: center;
+  background-color: $black-russian;
+  display: flex;
+  flex-direction: row;
+  height: 12vh;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.logo-container {
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  margin: 0;
+  padding: 0;
+}
+
+.search-container {
+  align-items: center;
+  background-color: $white;
+  border-radius: 8px;
+  display: flex;
+  height: 4vh;
+  flex-direction: row;
+  width: 20vw;
+}
+
+.search-input {
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 4vh;
+  margin: 0;
+  padding: 0;
+  width: 18vw;
+}
+
+.search-button {
+  background-color: $white;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 3vh;
+  margin: 0;
+  padding: 0;
+  width: 2vw;
+}
+
+.button-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.shopping-cart-button {
+  align-content: center;
+  align-items: center;
+  background-color: $black-russian;
+  border-color: $white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  height: 4vh;
+  justify-content: space-around;
+  width: 12vw;
+
+  p {
+    color: $white;
+  }
+}

@@ -1,0 +1,58 @@
+@import "style/common/constants";
+@import "style/common/typography";
+
+.login-page {
+  background-image: url("../../assets/img/home-page-background.png");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 7vw;
+}
+
+.logo {
+  margin-top: 2vh;
+}
+
+.login {
+  align-items: center;
+  background-color: $white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 58vh;
+  justify-content: space-around;
+  width: 22vw;
+}
+
+.forgot-password-link {
+  margin-bottom: 4vh;
+}
+
+.signup {
+  align-items: center;
+  background-color: $white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+  justify-content: space-around;
+  text-align: center;
+  width: 22vw;
+}
+
+.common-white-button {
+  background-color: $white;
+  border: 1px solid $black-russian;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 4vh;
+  margin-bottom: 4vh;
+  padding: 0;
+  width: 16vw;
+}
+
+.disable-link {
+  pointer-events: none;
+}
