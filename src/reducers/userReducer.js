@@ -4,6 +4,7 @@ const initialState = {
   loading: false,
   errorMsg: null,
   loggedInSuccess: false,
+  loggedOutSuccess: false,
 };
 
 const { USER_REQUEST, USER_REQUEST_SUCCESS, USER_REQUEST_ERROR } =
@@ -16,13 +17,15 @@ export const user = (state = initialState, { type, data }) => {
         ...state,
         loading: true,
         errorMsg: null,
+        loggedInSuccess: false,
+        loggedOutSuccess: false,
       };
     case USER_REQUEST_SUCCESS:
       return {
         ...state,
         loading: false,
         errorMsg: null,
-        loggedInSuccess: true,
+        [data]: true,
       };
     case USER_REQUEST_ERROR:
       return {
@@ -30,6 +33,7 @@ export const user = (state = initialState, { type, data }) => {
         loading: false,
         errorMsg: data,
         loggedInSuccess: false,
+        loggedOutSuccess: false,
       };
     default:
       return state;
