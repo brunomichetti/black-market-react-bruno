@@ -41,6 +41,7 @@ const MyAccountMenu = ({ openedMenu = false, setOpenedMenu }) => {
         <CommonLoader />
       ) : (
         <button
+          type="button"
           className={conditionalClassName("my-account-button regular-text", {
             "border-top": openedMenu,
             border: !openedMenu,
@@ -58,7 +59,11 @@ const MyAccountMenu = ({ openedMenu = false, setOpenedMenu }) => {
       )}
       {openedMenu && (
         <section className="menu">
-          <button className="menu-item regular-text" onClick={handleLogout}>
+          <button
+            type="button"
+            className="menu-item regular-text"
+            onClick={handleLogout}
+          >
             <p>
               {intl.formatMessage({
                 id: "logout",

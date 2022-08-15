@@ -6,23 +6,23 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+}
 
-  button {
-    align-content: center;
-    align-items: center;
-    background-color: $black-russian;
-    border: 1px solid $black-russian;
-    border-radius: 8px;
-    box-sizing: border-box;
-    color: $white;
-    display: flex;
-    flex-direction: column;
-    height: 4vh;
-    justify-content: center;
-    line-height: 4vh;
-    padding: 0;
-    width: 16vw;
-  }
+.login-form-button {
+  align-content: center;
+  align-items: center;
+  background-color: $black-russian;
+  border: 1px solid $black-russian;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 4vh;
+  justify-content: center;
+  line-height: 4vh;
+  padding: 0;
+  width: 16vw;
 }
 
 .error-container {

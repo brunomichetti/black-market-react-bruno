@@ -8,6 +8,7 @@ import CommonInput from "components/common/CommonInput/CommonInput";
 import CommonLoader from "components/common/CommonLoader/CommonLoader";
 import { userActions } from "actions/userActions";
 import { homePath } from "constants/pathConstants";
+import HideTextInput from "components/common/HideTextInput/HideTextInput";
 
 import "./login-form.scss";
 
@@ -52,10 +53,9 @@ const LoginForm = () => {
         inputValue={email}
         handleChange={handleChange}
       />
-      <CommonInput
+      <HideTextInput
         name="password"
         label="Password"
-        inputType="password"
         placeHolder={intl.formatMessage({
           id: "type.password",
         })}
@@ -64,7 +64,7 @@ const LoginForm = () => {
       />
       <button
         type="submit"
-        className="regular-text"
+        className="regular-text login-form-button"
         disabled={!email || !password}
       >
         {!loading ? <>Log in</> : <CommonLoader />}
