@@ -10,6 +10,9 @@ label {
 input {
   border-radius: 8px;
   box-sizing: border-box;
+  border: 2px;
+  border-color: $black-russian;
+  border-style: solid;
   height: 4vh;
   margin-top: 1vh;
   outline: none !important;

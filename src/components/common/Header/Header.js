@@ -28,12 +28,12 @@ const Header = () => {
             id: "search.products",
           })}
         />
-        <button className="search-button" disabled={loading}>
+        <button type="button" className="search-button" disabled={loading}>
           <img src={searchButton} alt="" className="button-icon" />
         </button>
       </section>
       <MyAccountMenu openedMenu={openedMenu} setOpenedMenu={setOpenedMenu} />
-      <button className="shopping-cart-button" disabled={loading}>
+      <button type="button" className="shopping-cart-button" disabled={loading}>
         <p className="regular-text">
           {intl.formatMessage({
             id: "shopping.cart",
