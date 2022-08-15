@@ -1,0 +1,63 @@
+@import "style/common/constants";
+@import "style/common/typography";
+
+.my-account-menu {
+  align-items: center;
+  display: flex;
+  height: 4vh;
+  flex-direction: column;
+  width: 15vw;
+}
+
+.border {
+  border-radius: 8px;
+}
+
+.border-top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.my-account-button {
+  align-content: center;
+  align-items: center;
+  background-color: $black-russian;
+  border-color: $white;
+  display: flex;
+  flex-direction: row;
+  height: 4vh;
+  justify-content: space-between;
+  width: 12vw;
+
+  p {
+    color: $white;
+    margin-left: 0.5vw;
+  }
+}
+
+.menu-item {
+  align-content: center;
+  align-items: center;
+  background-color: $black-russian;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-color: $white;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 1px;
+  height: 4vh;
+  line-height: 4vh;
+  text-align: center;
+  width: 12vw;
+  z-index: 1;
+  p {
+    color: $white;
+    margin: 0;
+  }
+}
+
+.button-icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 0.5vw;
+}

@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useIntl } from "react-intl";
+import { useNavigate } from "react-router-dom";
 
 import "style/common/_common.scss";
 import CommonInput from "components/common/CommonInput/CommonInput";
 import CommonLoader from "components/common/CommonLoader/CommonLoader";
 import { userActions } from "actions/userActions";
+import { homePath } from "constants/pathConstants";
 
 import "./login-form.scss";
 
@@ -14,7 +16,11 @@ const LoginForm = () => {
 
   const dispatch = useDispatch();
 
-  const { loading, errorMsg } = useSelector((state) => state.user);
+  const navigate = useNavigate();
+
+  const { loading, errorMsg, loggedInSuccess } = useSelector(
+    (state) => state.user
+  );
 
   const [inputs, setInputs] = useState({ email: "", password: "" });
   const { email, password } = inputs;
@@ -27,6 +33,12 @@ const LoginForm = () => {
     e.preventDefault();
     dispatch(userActions.login(email, password));
   };
+
+  useEffect(() => {
+    if (loggedInSuccess) {
+      navigate(homePath);
+    }
+  }, [navigate, loggedInSuccess]);
 
   return (
     <form className="login-form" onSubmit={handleSubmit}>
